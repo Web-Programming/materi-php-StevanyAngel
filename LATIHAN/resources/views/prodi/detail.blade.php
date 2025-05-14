@@ -1,3 +1,8 @@
-<div>
-    <!-- Always remember that you are absolutely unique. Just like everyone else. - Margaret Mead -->
-</div>
+@extends('layouts.master')
+
+@section('title', 'Detail Prodi')
+
+@section('content')
+<h1>Detail Prodi</h1>
+<!-- Tampilkan detail prodi di sini -->
+@endsection
