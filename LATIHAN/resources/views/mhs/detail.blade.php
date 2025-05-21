@@ -1,8 +1,3 @@
-@extends('layouts.master')
-
-@section('title', 'Detail Mahasiswa')
-
-@section('content')
-<h1>Detail Mahasiswa</h1>
-<!-- Tampilkan detail mahasiswa di sini -->
-@endsection
+<div>
+    <!-- I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison -->
+</div>

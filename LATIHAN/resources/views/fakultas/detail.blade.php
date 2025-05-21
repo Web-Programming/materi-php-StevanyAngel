@@ -1,8 +1,3 @@
-@extends('layouts.master')
-
-@section('title', 'Detail Fakultas')
-
-@section('content')
-<h1>Detail Fakultas</h1>
-<!-- Tampilkan detail fakultas di sini -->
-@endsection
+<div>
+    <!-- Life is available only in the present moment. - Thich Nhat Hanh -->
+</div>

@@ -1,8 +1,3 @@
-@extends('layouts.master')
-
-@section('title', 'Detail Materi')
-
-@section('content')
-<h1>Detail Materi</h1>
-<!-- Tampilkan detail materi di sini -->
-@endsection
+<div>
+    <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
+</div>
