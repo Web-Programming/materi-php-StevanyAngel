@@ -1,5 +1,5 @@
 <!--begin::Header-->
-      <nav class="app-header navbar navbar-expand bg-body">
+<nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Start Navbar Links-->
@@ -9,7 +9,7 @@
                 <i class="bi bi-list"></i>
               </a>
             </li>
-            <li class="nav-item d-none d-md-block"><a href="{{ url("/>") }}" class="nav-link">Home</a></li>
+            <li class="nav-item d-none d-md-block"><a href="{{ url("/") }}" class="nav-link">Home</a></li>
           </ul>
           <!--end::Start Navbar Links-->
           <!--begin::End Navbar Links-->
@@ -22,7 +22,7 @@
             </li>
             <!--end::Navbar Search-->
             <!--begin::Messages Dropdown Menu-->
-            
+           
             <!--end::Messages Dropdown Menu-->
             <!--begin::Notifications Dropdown Menu-->
             <li class="nav-item dropdown">
@@ -79,7 +79,7 @@
                     alt="User Image"
                   />
                   <p>
-                    {{ auth()->user()->name }} - {{ auth()->user()->email }}
+                  {{ auth()->user()->name }} - {{ auth()->user()->email }}
                   </p>
                 </li>
                 <!--end::User Image-->

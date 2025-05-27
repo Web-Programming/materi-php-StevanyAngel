@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Register Page" />
     <meta name="author" content="ColorlibHQ" />
-
+   
     <!--end::Primary Meta Tags-->
     <!--begin::Fonts-->
     <link
@@ -49,36 +49,32 @@
             href=""
             class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover"
           >
-            <h1 class="mb-0"><b>Registration Page</h1>
+            <h1 class="mb-0">Registration Page</h1>
           </a>
         </div>
         <div class="card-body register-card-body">
           <p class="register-box-msg">Register a new membership</p>
-          <form action="{{url ('register')}}" method="post">
+          <form action="{{ url('register') }}" method="post">
             @csrf
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="registerFullName" name="name" type="text" class="form-control" placeholder="" />
+                <input id="registerFullName" name="name" type="text" class="form-control" placeholder="" value="{{ old('name') }}" />
                 <label for="registerFullName">Full Name</label>
               </div>
               <div class="input-group-text"><span class="bi bi-person"></span></div>
             </div>
             @error('name')
-            <div class="text-danger small mt-1 mb-2">
-              {{ $message }}
-            </div>
+                <span class="text-danger">{{ $message }}</span>
             @enderror
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="registerEmail" type="email" name="email" class="form-control" placeholder="" />
+                <input id="registerEmail" type="email" name="email" class="form-control" placeholder="" value="{{ old('email') }}" />
                 <label for="registerEmail">Email</label>
               </div>
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             @error('email')
-            <div class="text-danger small mt-1 mb-2">
-              {{ $message }}
-            </div>
+                <span class="text-danger">{{ $message }}</span>
             @enderror
             <div class="input-group mb-1">
               <div class="form-floating">
@@ -88,9 +84,7 @@
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             @error('password')
-            <div class="text-danger small mt-1 mb-3">
-              {{ $message }}
-            </div>
+                <span class="text-danger">{{ $message }}</span>
             @enderror
             <!--begin::Row-->
             <div class="row">
@@ -104,16 +98,16 @@
             </div>
             <!--end::Row-->
           </form>
-
+          
           <!-- /.social-auth-links -->
           <p class="mb-0">
-            <a href="{{url ('login')}}" class="link-primary text-center"> I already have a membership </a>
+            <a href="{{ url('login')}}" class="link-primary text-center"> I already have a membership </a>
           </p>
         </div>
         <!-- /.register-card-body -->
       </div>
     </div>
-    <!-- /.register-box --> 
+    <!-- /.register-box -->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"

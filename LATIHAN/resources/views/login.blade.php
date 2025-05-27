@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Login Page" />
     <meta name="author" content="ColorlibHQ" />
-
+   
     <!--end::Primary Meta Tags-->
     <!--begin::Fonts-->
     <link
@@ -53,12 +53,12 @@
         </div>
         <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
-           @error('failed')
-            <div class="alert alert-danger">
-              {{ $message }}
-            </div>
-            @enderror
-          <form action="{{ url('login') }}" method="post">
+          @error('failed')
+          <div class="alert alert-danger">
+            {{ $message }}
+          </div>
+          @enderror
+          <form action="{{ url("login") }}" method="post">
             @csrf
             <div class="input-group mb-1">
               <div class="form-floating">
@@ -68,9 +68,7 @@
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
             @error('email')
-            <div class="text-danger small mt-1 mb-2">
-              {{ $message }}
-            </div>
+                <span class="text-danger">{{ $message }}</span>
             @enderror
             <div class="input-group mb-1">
               <div class="form-floating">
@@ -80,9 +78,7 @@
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             @error('password')
-            <div class="text-danger small mt-1 mb-2">
-                {{ $message }}
-            </div>
+                <span class="text-danger">{{ $message }}</span>
             @enderror
             <!--begin::Row-->
             <div class="row">
@@ -102,10 +98,11 @@
             </div>
             <!--end::Row-->
           </form>
+          
           <!-- /.social-auth-links -->
           <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
           <p class="mb-0">
-            <a href="{{url ('register')}}" class="text-center"> Register a new membership </a>
+            <a href="{{ url('register')}}" class="text-center"> Register a new membership </a>
           </p>
         </div>
         <!-- /.login-card-body -->

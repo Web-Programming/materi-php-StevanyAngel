@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
-
+use Symfony\Component\HttpFoundation\Response;
 
 class CekLogin
 {
@@ -19,12 +18,12 @@ class CekLogin
     {
         //cek apakah user sudah login
         if(Auth::check()){
-            //cek apakah level admin atau user (sesuai dengan roles yang di passing)
-            if(Auth::user()->level == $roles){
+            //cek apakah level admin atau uses (sesuai dengan roles yang di passing)
+            if(Auth::user()->level === $roles){
                 return $next($request);
             }
         }
 
-        return redirect('login')->withErrors(['failed' => "Anda tidak memiliki akses"]);
+        return redirect('login')->withErrors(['failed' => 'Anda tidak memiliki akses!']);
     }
 }
